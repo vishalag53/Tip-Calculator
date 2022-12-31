@@ -4,83 +4,111 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/download"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".MainActivity">
 
     <EditText
-        android:id="@+id/cost_of_services"
-        android:layout_width="160dp"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="100dp"
-        android:hint="@string/enter_cost"
-        android:inputType="numberDecimal"
-        android:textColorHint="#546E7A"
-        />
-
-    <TextView
+        android:id="@+id/cost_entry"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/service_questions"
-        android:textStyle="bold"
-        android:layout_marginTop="12dp"
-        android:layout_marginBottom="10dp"
-        android:layout_marginHorizontal="111dp"
+        android:layout_marginBottom="4dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/cost_entry"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        android:padding="10dp"
+        android:textColorHint="#1565C0" />
+
+    <TextView
+        android:id="@+id/service_question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="6dp"
+        android:padding="10dp"
         android:text="@string/service_question"
-        />
+        android:textColor="#000000"
+        android:textSize="21sp"
+        android:textStyle="bold" />
 
     <RadioGroup
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/tip_options"
-        android:checkedButton="@id/tip_20_perc"
-        android:layout_marginHorizontal="113dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="10dp"
-        android:orientation="vertical">
+        android:padding="10dp"
+        android:layout_marginBottom="6dp"
+        android:id="@+id/tip_perc"
+        android:checkedButton="@id/amazing_radio_btn"
+        >
 
         <RadioButton
-            android:id="@+id/tip_20_perc"
+            android:id="@+id/amazing_radio_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:minHeight="48dp"
-            android:text="@string/twenty_perc"
+            android:padding="8dp"
+            android:text="@string/amazing_radio_btn"
+            android:textSize="21sp"
             android:textStyle="bold" />
 
         <RadioButton
-            android:id="@+id/tip_15_perc"
+            android:id="@+id/good_radio_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:minHeight="48dp"
-            android:text="@string/fifteen_perc"
+            android:padding="8dp"
+            android:text="@string/good_radio_btn"
+            android:textColor="#000000"
+            android:textSize="21sp"
             android:textStyle="bold" />
 
         <RadioButton
-            android:id="@+id/tip_10_perc"
+            android:id="@+id/okay_radio_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:minHeight="48dp"
-            android:text="@string/ten_perc"
+            android:padding="8dp"
+            android:text="@string/okay_radio_btn"
+            android:textColor="#000000"
+            android:textSize="21sp"
             android:textStyle="bold" />
 
     </RadioGroup>
 
-    <Switch
-        android:id="@+id/round_up_switch"
-        android:layout_width="match_parent"
+    <!--<Switch
+        android:layout_width="410dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginHorizontal="10dp"
         android:checked="true"
+        android:minWidth="48dp"
         android:minHeight="48dp"
-        android:text="@string/round_up"
-        android:textStyle="bold" />
+        android:text="@string/round_up_switch"
+        android:textSize="21sp"
+        android:id="@+id/round_up_switch"
+        android:layout_marginBottom="6dp"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />  -->
+
+    <Button
+        android:id="@+id/calculate_btn"
+        android:layout_width="410dp"
+        android:layout_height="wrap_content"
+        android:text="@string/calculate_btn"
+        android:gravity="center"
+        android:textColor="#C50E0E"
+        android:textSize="27sp"
+        android:minHeight="48dp"
+        android:minWidth="48dp"
+        />
 
     <TextView
-        android:layout_width="match_parent"
+        android:id="@+id/result"
+        android:layout_width="120dp"
         android:layout_height="wrap_content"
-        android:id="@+id/calculate_cost_button"
-        android:text="@string/claculate"
-        android:minHeight="48dp"
-        />
+        android:gravity="center"
+        android:text="@string/result"
+        android:textColor="#4A148C"
+        android:textSize="24sp" />
+
 
 </LinearLayout>
