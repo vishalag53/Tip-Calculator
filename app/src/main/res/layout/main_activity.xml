@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/cost_of_services"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="100dp"
+        android:hint="@string/enter_cost"
+        android:inputType="numberDecimal"
+        android:textColorHint="#546E7A"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/service_questions"
+        android:textStyle="bold"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginHorizontal="111dp"
+        android:text="@string/service_question"
+        />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tip_options"
+        android:checkedButton="@id/tip_20_perc"
+        android:layout_marginHorizontal="113dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/tip_20_perc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:text="@string/twenty_perc"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/tip_15_perc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:text="@string/fifteen_perc"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/tip_10_perc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:text="@string/ten_perc"
+            android:textStyle="bold" />
+
+    </RadioGroup>
+
+    <Switch
+        android:id="@+id/round_up_switch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="10dp"
+        android:checked="true"
+        android:minHeight="48dp"
+        android:text="@string/round_up"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/calculate_cost_button"
+        android:text="@string/claculate"
+        android:minHeight="48dp"
+        />
+
+</LinearLayout>
